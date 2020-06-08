@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center black-text"> 🌿 Forest Fire Probability 🔥 </h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Predict the probability of Forest-Fire Occurence
+        <br>
+        </h5>
+      </div>
+
+              <div class="row">
+    <form action='/predict' method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+            <label for="first_name"><b>Temperature</b></label>
+            <br>
+          <input placeholder="Temperature in Celsius" name="Temperature" id="first_name" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+
+          <label for="last_name"><b>Oxygen </b></label>
+            <br>
+          <input id="last_name" name="Oxygen" placeholder="Oxygen content in ppm"  type="text" class="validate">
+
+        </div>
+
+        <div class="input-field col s4">
+            <label for="_name"><b>Humidity</b></label>
+            <br>
+          <input id="_name" name="Humidity" placeholder="Humidity %" type="text" class="validate">
+
+        </div>
+
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+      </div>
+    </form>
+      </div>
+
+      <br>
+      <h3>
+        {{pred}}
+      </h3>
+      Guidelines : <a href="http://www.fao.org/forestry/27221-06293a5348df37bc8b14e24472df64810.pdf">http://www.fao.org/forestry/27221-06293a5348df37bc8b14e24472df64810.pdf</a>
+        <br>
+
+    </div>
+  </div>
+
+    <br><br>
+  </div>
+  </div>
+
+  <footer class="page-footer m-0 black">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About Me</h5>
+          <p class="grey-text text-lighten-4">
+            I am Abhishek Sheoran , a sophomore at Thapar Institute of Engineering & Technology. Currently pursuing Computer Science & Engineering.
+          </p>
+
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made <a class="orange-text text-lighten-3" href="http://materializecss.com">with ♥ by Abhishek Sheoran</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
+
